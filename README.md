@@ -19,14 +19,14 @@ sudo apt-get purge needrestart
 Install docker and docker-compose:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/taiga-io-kanban-for-business-project/master/setup.sh | sudo bash -s
+curl -s https://raw.githubusercontent.com/6Ministers/taiga-io-docker-compose-for-projects/master/setup.sh | sudo bash -s
 ```
 
 Download Taiga instance:
 
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/taiga-io-kanban-for-business-project/master/download.sh | sudo bash -s taiga
+curl -s https://raw.githubusercontent.com/6Ministers/taiga-io-docker-compose-for-projects/master/download.sh | sudo bash -s taiga
 ```
 
 If `curl` is not found, install it:
