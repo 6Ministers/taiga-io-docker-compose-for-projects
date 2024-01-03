@@ -102,7 +102,18 @@ https://taiga.your-domain:443 {
 docker-compose up -d
 ```
 
+``` bash
+./taiga-manage.sh createsuperuser
+```
+
+`Login`
+`Email`
+`Password`
+
 Then open `https://taiga.domain.com:` to access Taiga
+
+
+
 
 
 ## Taiga container management
