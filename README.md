@@ -106,9 +106,9 @@ docker-compose up -d
 ./taiga-manage.sh createsuperuser
 ```
 
-*`Login`
-*`Email`
-*`Password`
+* `Login`
+* `Email`
+* `Password`
 
 Then open `https://taiga.domain.com:` to access Taiga
 
