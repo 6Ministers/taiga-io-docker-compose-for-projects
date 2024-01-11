@@ -1,0 +1,29 @@
+version: "3.5"
+
+x-environment:
+  &default-back-environment
+  POSTGRES_DB: "taiga"
+  POSTGRES_USER: "${POSTGRES_USER}"
+  POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+  POSTGRES_HOST: "taiga-db"
+  TAIGA_SECRET_KEY: "${SECRET_KEY}"
+  RABBITMQ_USER: "${RABBITMQ_USER}"
+  RABBITMQ_PASS: "${RABBITMQ_PASS}"
+  CELERY_ENABLED: "False"
+
+x-volumes:
+  &default-back-volumes
+  - taiga-static-data:/taiga-back/static
+  - taiga-media-data:/taiga-back/media
+  # - ./config.py:/taiga-back/settings/config.py
+
+services:
+  taiga-manage:
+    image: taigaio/taiga-back:latest
+    environment: *default-back-environment
+    depends_on:
+      - taiga-db
+    entrypoint: "python manage.py"
+    volumes: *default-back-volumes
+    networks:
+      - taiga
