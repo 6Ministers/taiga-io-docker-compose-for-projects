@@ -102,6 +102,14 @@ https://taiga.your-domain:443 {
 docker-compose up -d
 ```
 
+So that the script can run, we make it executable
+
+``` bash
+chmod +x taiga-manage.sh
+```
+
+Then we create a user
+
 ``` bash
 ./taiga-manage.sh createsuperuser
 ```
